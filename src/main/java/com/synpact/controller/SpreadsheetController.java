@@ -19,8 +19,9 @@ public class SpreadsheetController {
     }
 	
 	@PostMapping("/setCellValue")
-    public void setCellValue(@RequestBody CellValueRequest request) {
+    public Object setCellValue(@RequestBody CellValueRequest request) {
 		spreadEntity.setCellValue(request.getCellId(), request.getValue());
+		return spreadEntity.getCellValue(request.getCellId());
     }
 
     @GetMapping("/getCellValue")

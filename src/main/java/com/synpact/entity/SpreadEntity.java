@@ -16,9 +16,7 @@ public class SpreadEntity {
 			if(value instanceof Integer || value instanceof Double) {
 				this.cells.put(cellId, value);
 			} else if(value instanceof String){
-				System.out.println("hola");
 				String mid=value.toString().trim().substring(1);
-				System.out.println("mid="+mid);
 				String[] ar=mid.split("\\+");
 				System.out.println("size="+ar.length);
 				int sum=0;
